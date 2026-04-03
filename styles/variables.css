@@ -1,8 +1,8 @@
 :root {
   --main-font: 'Inter';
   --accent-font: 'PressStart2P';
-  --main-card-font-weight: 400;
-  --card-title-font-weight: 700;
+  --main-card-font-weight: 410;
+  --card-title-font-weight: 715;
   --accent-color: #000;
   --heart-contour-color: var(--accent-color);
   --heart-fill-color: #ff0000;

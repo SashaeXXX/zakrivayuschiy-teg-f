@@ -159,8 +159,7 @@
   z-index: 1;
 }
 
-.button:hover::before,
-.button.is-liked::before {
+.button:hover::before {
   transform: scaleX(1);
 }
 
@@ -216,17 +215,22 @@
   gap: 30px;
   border: 2px solid black;
   inline-size: calc(353/1440 * 100vw);
+  min-inline-size: 353px;
   padding: 26px 30px;
   font-family: var(--accent-font);
   font-size: 14px;
   line-height: 1.5;
   text-transform: uppercase;
-  overflow: hidden;
 }
 
 .popup[open]::backdrop {
   background-color: black;
   opacity: 0.75;
+}
+
+.popup__icon {
+  min-width: 39px;
+  min-height: 39px;
 }
 
 .popup__content {
@@ -240,7 +244,7 @@
   text-transform: uppercase;
 }
 
-@media (width <= 375px) {
+@media (width <= 376px) {
  .header {
     padding: 0;
     padding-block: 121px;
@@ -311,16 +315,22 @@
   transition: fill 0.3s ease 0.05s;
 }
 
-.like-icon:active .core,
-.like-icon:active .main-body {
+.like-icon:active .core {
   fill: var(--heart-fill-color);
-  transition: fill 0.3s ease 0.5s;
 }
 
-.like-icon.is-liked .core,
+.like-icon.is-liked .core {
+  fill: var(--heart-fill-color);
+}
+
+.like-icon:active .main-body {
+  fill: var(--heart-fill-color);
+  transition: fill 0.3s ease 0.05s;
+}
+
 .like-icon.is-liked .main-body {
   fill: var(--heart-fill-color);
-  transition: fill 0.3s ease 0.5s;
+  transition: fill 0.3s ease 0.05s;
 }
 
 .like-icon.is-liked .contour {
